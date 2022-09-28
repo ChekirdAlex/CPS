@@ -32,22 +32,13 @@ ul {
     align-items: center;
 }
 
-/*WRAP*/
-.nav-bar__first-wrap {
-    margin-right: auto;
-}
-
-.nav-bar__second-wrap {
-    margin-left: auto;
+.nav-bar--tablet--visible {
     display: none;
 }
 
-.nav-bar__third-wrap {
-    margin-left: auto;
-}
-
-.nav-bar__second-wrap--hidden {
-    display: none;
+.nav-bar__list {
+    gap: 5%;
+    margin: auto;
 }
 
 /*HEADER LINKS*/
@@ -78,14 +69,35 @@ ul {
 }
 
 /*ITEMS*/
-.nav-bar__menu {
-    margin-right: 16px;
+
+.nav-bar__round-menu {
+    background: url("../icons/menu.png") center center no-repeat;
 }
 
 .nav-bar__logo {
     display: flex;
     align-items: center;
     align-self: center;
+}
+
+.nav-bar__round-call {
+    background: url("../icons/call.png") center center no-repeat;
+}
+
+.nav-bar__round-message {
+    background: url("../icons/message.png") center center no-repeat;
+}
+
+.nav-bar__round-contacts {
+    background: url("../icons/contacts.png") center center no-repeat;
+}
+
+.nav-bar__round-request {
+    background: url("../icons/request.png") center center no-repeat;
+}
+
+.nav-bar__round-repair-status {
+    background: url("../icons/repair-status.png") center center no-repeat;
 }
 
 .nav-bar__logo::after {
@@ -95,10 +107,7 @@ ul {
     background: #EAEAEA;
     border-radius: 1px;
     margin-left: 17px;
-}
-
-.nav-bar__repair-status {
-    margin-left: 16px;
+    margin-right: 6px;
 }
 
 .nav-bar__round {
@@ -149,7 +158,7 @@ ul {
 
 .list--scrollbar--hidden {
     -ms-overflow-style: none;
-    /*scrollbar-width: none; !*Свойство не работает*!*/
+    scrollbar-width: none;
 }
 
 .main__link {
@@ -251,12 +260,32 @@ ul {
     }
 
     /*VISIBLE*/
-    .nav-bar__second-wrap--hidden {
+    .nav-bar--tablet--visible {
         display: list-item;
     }
 
-    .nav-bar__third-wrap {
-        margin: 0;
+    .nav-bar__list {
+        gap: 16px;
+    }
+
+    /*ITEMS*/
+    .nav-bar__item {
+        margin-left: auto;
+    }
+
+    .nav-bar__logo {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .nav-bar__menu,
+    .nav-bar__call,
+    .nav-bar__message,
+    .nav-bar__request,
+    .nav-bar__contacts,
+    .nav-bar__request,
+    .nav-bar__repair-status {
+        margin-left: 0;
     }
 
     .nav-bar__menu,
@@ -286,12 +315,8 @@ ul {
         height: 32px;
         background: #EAEAEA;
         border-radius: 1px;
-        margin: 0 20px;
-    }
-
-    .nav-bar__message,
-    .nav-bar__contacts {
-        margin-left: 16px;
+        margin-right: 20px;
+        margin-left: 4px;
     }
 
     .main {
@@ -341,26 +366,23 @@ ul {
     }
 
     .container {
-        padding: 0 2.86%;
+        position: relative;
+        width: 1120px;
+        padding: 0 32px;
     }
 
-    .header {
-        min-height: 0;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        background: #F8F8F8;
+    .nav-bar__list {
+        position: absolute;
+        right: 32px;
+        top: 42px;
     }
 
-    .nav-bar__first-wrap--hidden,
-    .nav-bar__second-wrap--hidden{
+    .nav-bar__item--desktop--hidden {
         display: none;
     }
 
-    .nav-bar__third-wrap {
-        position: absolute;
-        top: 42px;
-        right: 2.86%;
+    .nav-bar--tablet--visible {
+        display: none;
     }
 
     .nav-bar__description--hidden {
@@ -371,10 +393,28 @@ ul {
         content: none;
     }
 
+    .header {
+        min-height: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        background: #F8F8F8;
+    }
+
     .main {
         min-height: 535px;
         padding-top: 42px;
         padding-bottom: 49px;
+    }
+
+    .main__header::before {
+        display: inline-block;
+        position: relative;
+        content: "";
+        width: 4px;
+        height: 40px;
+        background: #41F6D7;
+        left: -32px;
     }
 
     .main__list {
