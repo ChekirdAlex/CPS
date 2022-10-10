@@ -1,2 +1,2 @@
 # CPS
-Student project 1.3_CPS
+Student project CPS
