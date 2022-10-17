@@ -44,6 +44,10 @@ html{
     width: 240px;
 }
 
+.swiper-slide:last-child {
+    margin-right: 16px;
+}
+
 .swiper-slide__button {
     position: relative;
     width: 240px;
