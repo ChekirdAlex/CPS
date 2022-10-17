@@ -14,12 +14,12 @@
         <link rel="stylesheet" href="css/repair-brands-style.css">
     </head>
     <body>
-        <div class="repair-container">
+        <div class="repair-container repair-container--overflow--hidden">
             <header class="repair-header">
                 <h1 class="repair-title">Ремонт техники различных брендов</h1>
             </header>
             <main class="repair-main">
-                <div class="swiper">
+                <div class="swiper swiper--overflow--hidden">
                     <!-- Additional required wrapper -->
                     <ul class="swiper-wrapper">
                         <!-- Slides -->
@@ -60,10 +60,12 @@
                     <!-- If we need pagination -->
                     <div class="swiper-pagination"></div>
                 </div>
+                <button class="show-more">Показать все</button>
             </main>
-            <!-- Slider main container -->
         </div>
+        <!-- Slider main container -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script src="js/swiper.js"></script>
+        <script src="js/more-brands.js"></script>
     </body>
 </html>
