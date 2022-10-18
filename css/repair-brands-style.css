@@ -6,12 +6,12 @@
 
 html{
     font-family: 'TT Lakes', sans-serif;
+    background-color: #F2F2F2;
 }
 
 .repair-container {
     margin: 0 auto;
-    min-width: 320px;
-    background-color: #F2F2F2;
+    /*min-width: 320px;*/
 }
 
 .repair-header {
@@ -52,6 +52,7 @@ html{
     position: relative;
     width: 240px;
     height: 72px;
+    background-color: #FFFFFF;
     border: 1px solid #EAEAEA;
     border-radius: 6px;
     cursor: pointer;
@@ -90,37 +91,43 @@ html{
     border-radius: 6px;
 }
 
+.swiper-slide__icon {
+    position: absolute;
+    left: 16px;
+    top: 0;
+}
+
 /*Brands*/
 .swiper-slide__lenovo {
-    background: #FFFFFF url("../icons/brands/lenovo.png") no-repeat 10% 50%;
+    top: 21px;
 }
 
 .swiper-slide__samsung {
-    background: #FFFFFF url("../icons/brands/samsung.png") no-repeat 10% 50%;
+    top: 18px;
 }
 
 .swiper-slide__apple {
-    background: #FFFFFF url("../icons/brands/apple.png") no-repeat 10% 50%;
+    top: 12px;
 }
 
 .swiper-slide__viewSonic {
-    background: #FFFFFF url("../icons/brands/viewSonic.png") no-repeat 10% 50%;
+    top: 25px;
 }
 
 .swiper-slide__bosch {
-    background: #FFFFFF url("../icons/brands/bosch.png") no-repeat 10% 50%;
+    top: 22px;
 }
 
 .swiper-slide__hp {
-    background: #FFFFFF url("../icons/brands/hp.png") no-repeat 10% 50%;
+    top: 10px;
 }
 
 .swiper-slide__acer {
-    background: #FFFFFF url("../icons/brands/acer.png") no-repeat 10% 50%;
+    top: 25px;
 }
 
 .swiper-slide__sony {
-    background: #FFFFFF url("../icons/brands/sony.png") no-repeat 10% 50%;
+    top: 23px;
 }
 
 .swiper-pagination {
@@ -140,7 +147,8 @@ html{
 /*TABLET VERSION*/
 @media screen and (min-width: 768px) {
     .repair-container {
-        min-width: 768px;
+        /*min-width: 768px;*/
+        max-height: 338px;
         transition: height 1s;
     }
 
@@ -150,6 +158,8 @@ html{
 
     .repair-container--overflow--visible {
         height: 468px;
+        /*max-height: 468px;*/
+        /*height: auto;*/
     }
 
     .repair-header {
@@ -158,7 +168,8 @@ html{
     }
 
     .repair-main {
-        height: 266px;
+        /*height: 266px;*/
+        height: inherit;
         padding: 0 24px;
     }
 
@@ -172,15 +183,19 @@ html{
     }
 
     .swiper--overflow--visible {
-        height: 338px;
+        height: 87%;
+        /*max-height: 338px;*/
+        /*height: auto;*/
     }
 
     .swiper-wrapper {
         display: flex;
+        justify-content: space-around;
         list-style: none;
         flex-wrap: wrap;
         width: 100%;
-        height: 200px;
+        /*height: 200px;*/
+        height: auto;
         gap: 16px 24px;
     }
 
@@ -252,7 +267,7 @@ html{
 /*DESKTOP VERSION*/
 @media screen and (min-width: 1120px){
     .repair-container {
-        min-width: 1120px;
+        /*min-width: 1120px;*/
     }
 
     .repair-container--overflow--hidden {
@@ -295,13 +310,13 @@ html{
 /*Добавил, потому что с этого масштаба появляются огрызки*/
 /*EXTRA VERSION*/
 @media screen and (min-width: 1664px){
-    .repair-container--overflow--hidden {
-        height: 300px;
-    }
+    /*.repair-container--overflow--hidden {*/
+    /*    height: 300px;*/
+    /*}*/
 
-    .swiper--overflow--hidden {
-        height: 190px;
-    }
+    /*.swiper--overflow--hidden {*/
+    /*    height: 190px;*/
+    /*}*/
 
     .show-more {
         display: none;

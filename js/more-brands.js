@@ -4,9 +4,7 @@ const showMoreButton = document.querySelector('.show-more');
 const swiper = document.querySelector('.swiper'); //Visibility of brands list
 const container = document.querySelector('.repair-container'); // Background-color height;
 
-showMoreButton.addEventListener('click', function (evt) {
-    evt.preventDefault();
-
+showMoreButton.addEventListener('click', function () {
     swiper.classList.toggle('swiper--overflow--hidden');
     swiper.classList.toggle('swiper--overflow--visible');
 
@@ -19,5 +17,4 @@ showMoreButton.addEventListener('click', function (evt) {
     } else {
         showMoreButton.textContent = 'Показать все';
     }
-
 })
